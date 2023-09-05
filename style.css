@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #f9b1ff;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1{
+    font-size: 40px;
+    color: rgb(203, 39, 229);
+    padding: 15px 0;
+}
+h2{ font-size: 20px;
+}
+#color {
+    width: 100px;
+    height: 75px;
+    margin-bottom: 40px;
+    border: none;
+    cursor: pointer;
+    
+
+}
+#Lred {
+    color: red;
+}
+#Lgreen {
+    color: green;
+}
+#Lblue{
+    color: blue;
+}
+#LredC {
+    color: red;
+}
+#LgreenC {
+    color: green;
+}
+#LblueC {
+    color: blue;
+}
+
+.rowR {
+    padding: 5px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+.rowG {
+    padding: 5px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+.rowB {
+    padding: 5px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+.rowRC {
+    padding: 5px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+.rowGC {
+    padding: 5px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+.rowBC {
+    padding: 5px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+label { 
+    color: darkslategrey;
+}
+#colorComplementario {
+    background-color: rgb(255, 255, 255);
+    
+    margin-top: 10px;
+    width: 100px;
+    height: 75px;
+}
+#rgb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    color: aliceblue;
+    padding: 5px;
+    border: none;
+    background-color: rgb(55, 12, 48);
+    border-radius: 5px;
+    cursor:pointer;
+}
+#rgbC {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 25px;
+    color: aliceblue;
+    padding: 5px;
+    border: none;
+    background-color: rgb(55, 12, 48);
+    border-radius: 5px;
+    cursor:pointer;
+}
+#mono {
+    margin-top: 20px;
+
+}
+#coloresMono {
+    display: flex;
+    flex-direction: row;
+
+}
+#colorMono1 {
+    background-color: white;
+    height: 50px;
+    width: 50px;
+
+}
+#partes {
+    display: flex;
+    flex-direction: row;
+
+}
