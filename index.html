@@ -12,95 +12,69 @@
     <div class="rgb">
         <input type="color" id="color">
         <h2 id="hex">#000000</h2>
-        <button id="rgb" onclick="sacarRGB()">Obtener RGB</button>
-        <div class="rowR">
+        <div class="rowRGB">
             <label id="Lred" for="red">R:</label>
-            <h2 id="red">0</h2>
+            <h2 id="red">0</h2> 
         </div>
-        <div class="rowG">
+        <div class="rowRGB">
             <label id="Lgreen" for="green">G:</label>
             <h2 id="green">0</h2>
         </div>
-        <div class="rowB">
+        <div class="rowRGB">
             <label id="Lblue" for="blue">B:</label>
             <h2 id="blue">0</h2>
 
         </div>
-
-        <div id="mono">
+ 
+        <div>
             <h2>Monocromaticos</h2>
             <div id="coloresMono">
-                <div id="colorMono1"></div>
-                <div id="colorMono2"></div>
-                <div id="colorMono3"></div>
+
+ 
+
+            </div>
+
+        </div>
+        <div>
+            <h2>Complementario</h2>
+            <div id="colorComplementario" class="cuadrado"></div>
+            <div class="rowRG">
+                <div class="rowRGB">
+                    <label id="Lred" for="redC">R:</label>
+                    <h2 id="redC">0</h2>
+                </div>
+                <div class="rowRGB">
+                    <label id="LgreenC" for="greenC">G:</label>
+                    <h2 id="greenC">0</h2>
+                </div>
+                <div class="rowRGB">
+                    <label id="LblueC" for="blueC">B:</label>
+                    <h2 id="blueC">0</h2>
+        
+                </div>
+    
+        </div>
+        <div>
+            <h2>Complementario Dividido</h2>
+            <div id="coloresCompleDiv">
+
+
+
+            </div>
+
+        </div>
+        <div>
+            <h2>Monocromaticos</h2>
+            <div id="cololresAnalogos">
+                
             </div>
 
         </div>
     </div>
     
-    <div class="rgbC">
-        <button id="rgbC" onclick="calcularColores()">Calcular Color Complementario</button>
-        <div id="colorComplementario"></div>
-        <div class="rgbC">
-            <div class="rowRC">
-                <label id="LredC" for="redC">R:</label>
-                <h2 id="redC">0</h2>
-            </div>
-            <div class="rowGC">
-                <label id="LgreenC" for="greenC">G:</label>
-                <h2 id="greenC">0</h2>
-            </div>
-            <div class="rowBC">
-                <label id="LblueC" for="blueC">B:</label>
-                <h2 id="blueC">0</h2>
     
-            </div>
-
-    </div>
     
     <script src="script.js"></script>
-    <script>
-        function sacarRGB() {
-            var colorHex = document.getElementById("hex").textContent;
-
-            colorHex = colorHex.slice(1);
-
-            // Separar la cadena en componentes R, G y B
-            var r = parseInt(colorHex.slice(0, 2), 16);
-            var g = parseInt(colorHex.slice(2, 4), 16);
-            var b = parseInt(colorHex.slice(4, 6), 16);
-
-            // Actualizar los elementos con los valores RGB
-            document.getElementById("red").textContent = r;
-            document.getElementById("green").textContent =  g;
-            document.getElementById("blue").textContent = b;
-
-
-        }
-    </script>
-    <script>
-        function calcularColores() {
-           // Obtener los valores de los elementos 
-           var redValue = parseInt(document.getElementById("red").textContent);
-            var greenValue = parseInt(document.getElementById("green").textContent);
-            var blueValue = parseInt(document.getElementById("blue").textContent);
-
-            // Calcular los valores para los elementos 
-            var redCValue = 255 - redValue;
-            var greenCValue = 255 - greenValue;
-            var blueCValue = 255 - blueValue;
-
-            // Actualizar los elementos con los valores calculados
-            document.getElementById("redC").textContent = redCValue;
-            document.getElementById("greenC").textContent = greenCValue;
-            document.getElementById("blueC").textContent = blueCValue;
-
-            // Actualizar el color del cuadro
-            var colorBox = document.getElementById("colorComplementario");
-            colorBox.style.backgroundColor = `rgb(${redCValue}, ${greenCValue}, ${blueCValue})`;
-            
-        }
-
-    </script>
+    
 </body>
 </html>

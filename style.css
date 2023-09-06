@@ -16,7 +16,7 @@ body{
 h1{
     font-size: 40px;
     color: rgb(203, 39, 229);
-    padding: 15px 0;
+    padding: 15px ;
 }
 h2{ font-size: 20px;
 }
@@ -26,7 +26,6 @@ h2{ font-size: 20px;
     margin-bottom: 40px;
     border: none;
     cursor: pointer;
-    
 
 }
 #Lred {
@@ -38,67 +37,32 @@ h2{ font-size: 20px;
 #Lblue{
     color: blue;
 }
-#LredC {
-    color: red;
-}
-#LgreenC {
-    color: green;
-}
-#LblueC {
-    color: blue;
+
+
+
+
+.rowRGB {
+    padding: 5px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
 }
 
-.rowR {
-    padding: 5px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    width: auto;
-}
-.rowG {
-    padding: 5px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    width: auto;
-}
-.rowB {
-    padding: 5px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    width: auto;
-}
-.rowRC {
-    padding: 5px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    width: auto;
-}
-.rowGC {
-    padding: 5px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    width: auto;
-}
-.rowBC {
-    padding: 5px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    width: auto;
-}
 label { 
     color: darkslategrey;
 }
-#colorComplementario {
-    background-color: rgb(255, 255, 255);
-    
-    margin-top: 10px;
-    width: 100px;
+.cuadrado {
+    width: 75px;
     height: 75px;
+    border-color: black;
+    margin: 5px; 
+    
+}
+.parte {
+    width: wrap;
+    height: wrap;
+    
 }
 #rgb {
     display: flex;
@@ -136,12 +100,7 @@ label {
     flex-direction: row;
 
 }
-#colorMono1 {
-    background-color: white;
-    height: 50px;
-    width: 50px;
 
-}
 #partes {
     display: flex;
     flex-direction: row;
