@@ -46,9 +46,6 @@ h3 {
     flex-direction:row;
 }
 
-
-
-
 .rowRGB {
     padding: 5px;
     font-size: 20px;
@@ -89,7 +86,6 @@ label {
     flex-direction: row;
 
 }
-
 
 #partes {
     display: flex;
