@@ -1,76 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Interactivo | Teoria del Color</title>
     <link rel="stylesheet" href="style.css">
-</head>
+</head>  
 <body>
-    <h1>Seleccione un Color</h1>
-    
-    <div class="rgb">
-        <input type="color" id="color">
-        <h2 id="hex">#000000</h2>
-        <div class="rowRGB">
-            <label id="Lred" for="red">R:</label>
-            <h2 id="red">0</h2> 
-        </div>
-        <div class="rowRGB">
-            <label id="Lgreen" for="green">G:</label>
-            <h2 id="green">0</h2>
-        </div>
-        <div class="rowRGB">
-            <label id="Lblue" for="blue">B:</label>
-            <h2 id="blue">0</h2>
-
-        </div>
- 
-        <div>
-            <h2>Monocromaticos</h2>
-            <div id="coloresMono">
-
- 
-
+    <h1>Mapa Interactivo</h1> 
+    <div id="divicion"> 
+        <div class="rgb"> 
+            <h2>Seleccione un Color</h2>
+            <input type="color" id="color">
+            <div class="rowRGB">
+                <label for="hex">Hexadecimal:</label>
+                <h3 id="hex">#000000</h3>
+            </div> 
+            <div class="rowRGB">
+                <label id="Lred" for="red">R:</label>
+                <h2 id="red">0</h2> 
             </div>
-
+            <div class="rowRGB">
+                <label id="Lgreen" for="green">G:</label>
+                <h2 id="green">0</h2>
+            </div>
+            <div class="rowRGB">
+                <label id="Lblue" for="blue">B:</label>
+                <h2 id="blue">0</h2>
+    
+            </div>
+     
+            <div>
+                <h2>Monocromaticos</h2>
+                <div id="coloresMono">
+                    <div class="cuadrado"></div>
+                    <div class="cuadrado"></div>
+                    <div class="cuadrado"></div>
+     
+    
+                </div>
+    
+            </div>
         </div>
-        <div>
+
+    
+        <div class="rgb">
+            
             <h2>Complementario</h2>
             <div id="colorComplementario" class="cuadrado"></div>
-            <div class="rowRG">
-                <div class="rowRGB">
-                    <label id="Lred" for="redC">R:</label>
-                    <h2 id="redC">0</h2>
-                </div>
-                <div class="rowRGB">
-                    <label id="LgreenC" for="greenC">G:</label>
-                    <h2 id="greenC">0</h2>
-                </div>
-                <div class="rowRGB">
-                    <label id="LblueC" for="blueC">B:</label>
-                    <h2 id="blueC">0</h2>
-        
-                </div>
+            <div class="rowRGB">
+                <label id="Lred" for="redC">R:</label>
+                <h2 id="redC">0</h2>
+            </div>
+            <div class="rowRGB">
+                <label id="LgreenC" for="greenC">G:</label>
+                <h2 id="greenC">0</h2>
+            </div>
+            <div class="rowRGB">
+                <label id="LblueC" for="blueC">B:</label>
+                <h2 id="blueC">0</h2>
+    
+            </div>
+            <h2>Complementario Dividido</h2>
+            <div id="coloresCompleDiv" >
+                <div class="cuadrado"></div>
+                <div class="cuadrado"></div>
+            </div>
+            <h2>Analogos</h2>
+            <div id="cololresAnalogos">
+                <div class="cuadrado"></div>
+                <div class="cuadrado"></div>
+                <div class="cuadrado"></div>
+                <div class="cuadrado"></div>
+                <div class="cuadrado"></div>
+            </div>
+    
+    
+            
     
         </div>
-        <div>
-            <h2>Complementario Dividido</h2>
-            <div id="coloresCompleDiv">
-
-
-
-            </div>
-
-        </div>
-        <div>
-            <h2>Monocromaticos</h2>
-            <div id="cololresAnalogos">
-                
-            </div>
-
-        </div>
+    
     </div>
+            
+            
+
+
+    
     
     
     
