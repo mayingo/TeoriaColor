@@ -2,8 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-    background-color: #f9b1ff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 body{
     width: 100%;
@@ -11,15 +11,23 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    background: linear-gradient(to bottom, #f713f3, #9d44a5);
 }
 h1{
+    background-color: rgb(111, 2, 98);
     font-size: 50px;
-    color: rgb(203, 39, 229);
-    padding: 20px ;
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 50px;
 }
 h2 { 
     font-size: 32px;
-    margin-top: 25px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-color: #ffffff00;
+    border-bottom: rgb(111, 2, 98);
+    border-style: dashed;
 }
 h3 {
     font-size: 24px;
@@ -33,6 +41,7 @@ label {
     margin-right: 10px;
 }
 #color {
+    background-color: #f713f300;
     width: 75px;
     height: 75px;
     margin-bottom: 10px;
@@ -41,8 +50,14 @@ label {
     border-radius: 10px;
     border-width: 5px;
     cursor: pointer;
-
 }
+.fondo {
+    padding: 5px;
+    background-color: rgb(111, 2, 98);
+    border-radius: 15px;
+    color: white;
+}
+
 #Lred {
     color: red;
 }
@@ -72,7 +87,7 @@ label {
 
 .rgb {
     width: 650px;
-    height: 700px;
+    height: wrap;
     display: flex;
     align-items: center;
     flex-direction: column;
