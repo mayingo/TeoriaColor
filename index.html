@@ -8,31 +8,31 @@
 </head>  
 <body>
     <h1>Mapa Interactivo</h1> 
-    <div id="divicion"> 
+    <div class="filas"> 
         <div class="rgb"> 
             <h2>Seleccione un Color</h2>
-            <input type="color" id="color">
+            <input type="color" id="color"> 
             <div class="rowRGB">
                 <label for="hex">Hexadecimal:</label>
                 <h3 id="hex">#000000</h3>
             </div> 
             <div class="rowRGB">
                 <label id="Lred" for="red">R:</label>
-                <h2 id="red">0</h2> 
+                <h3 id="red">0</h3> 
             </div>
             <div class="rowRGB">
                 <label id="Lgreen" for="green">G:</label>
-                <h2 id="green">0</h2>
+                <h3 id="green">0</h3>
             </div>
             <div class="rowRGB">
                 <label id="Lblue" for="blue">B:</label>
-                <h2 id="blue">0</h2>
+                <h3 id="blue">0</h3>
     
             </div>
      
             <div>
                 <h2>Monocromaticos</h2>
-                <div id="coloresMono">
+                <div id="coloresMono" class="filas">
                     <div class="cuadrado"></div>
                     <div class="cuadrado"></div>
                     <div class="cuadrado"></div>
@@ -43,31 +43,38 @@
             </div>
         </div>
 
-    
+     
         <div class="rgb">
             
             <h2>Complementario</h2>
-            <div id="colorComplementario" class="cuadrado"></div>
-            <div class="rowRGB">
-                <label id="Lred" for="redC">R:</label>
-                <h2 id="redC">0</h2>
+            <div class="filas">
+                <div id="colorComplementario" class="cuadrado"></div>
+                <div>
+                    <div class="rowRGB">
+                        <label id="Lred" for="redC">R:</label>
+                        <h3 id="redC">0</h3>
+                    </div>
+                    <div class="rowRGB">
+                        <label id="Lgreen" for="greenC">G:</label>
+                        <h3 id="greenC">0</h3>
+                    </div>
+                    <div class="rowRGB">
+                        <label id="Lblue" for="blueC">B:</label>
+                        <h3 id="blueC">0</h3>
+                    </div>
+
+                </div>
             </div>
-            <div class="rowRGB">
-                <label id="LgreenC" for="greenC">G:</label>
-                <h2 id="greenC">0</h2>
-            </div>
-            <div class="rowRGB">
-                <label id="LblueC" for="blueC">B:</label>
-                <h2 id="blueC">0</h2>
-    
-            </div>
+            
+            
+
             <h2>Complementario Dividido</h2>
-            <div id="coloresCompleDiv" >
+            <div id="coloresCompleDiv" class="filas">
                 <div class="cuadrado"></div>
                 <div class="cuadrado"></div>
             </div>
             <h2>Analogos</h2>
-            <div id="cololresAnalogos">
+            <div id="cololresAnalogos" class="filas">
                 <div class="cuadrado"></div>
                 <div class="cuadrado"></div>
                 <div class="cuadrado"></div>

@@ -13,22 +13,33 @@ body{
     flex-direction: column;
 }
 h1{
-    font-size: 40px;
+    font-size: 50px;
     color: rgb(203, 39, 229);
-    padding: 15px ;
+    padding: 20px ;
 }
 h2 { 
-    font-size: 24px;
+    font-size: 32px;
+    margin-top: 25px;
 }
 h3 {
-    font-size: 18px;
+    font-size: 24px;
 
 }
+label { 
+    color: rgb(111, 2, 98);
+    font-size: 24px;
+    font-style:var();
+    font-weight: bold;
+    margin-right: 10px;
+}
 #color {
-    width: 100px;
+    width: 75px;
     height: 75px;
-    margin-bottom: 20px;
-    border: none;
+    margin-bottom: 10px;
+    border-color: rgb(81, 4, 113);
+    border-style: dashed;
+    border-radius: 10px;
+    border-width: 5px;
     cursor: pointer;
 
 }
@@ -41,10 +52,6 @@ h3 {
 #Lblue{
     color: blue;
 }
-#divicion{
-    display: flex;
-    flex-direction:row;
-}
 
 .rowRGB {
     padding: 5px;
@@ -54,11 +61,7 @@ h3 {
     width: auto;
 }
 
-label { 
-    color: rgb(230, 0, 255);
-    font-weight: 500px;
-    margin-right: 10px;
-}
+
 .cuadrado {
     width: 75px;
     height: 75px;
@@ -68,8 +71,8 @@ label {
 }
 
 .rgb {
-    width: 400px;
-    height: 600px;
+    width: 650px;
+    height: 700px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -81,14 +84,13 @@ label {
     margin-top: 20px;
 
 }
-#coloresMono, #coloresCompleDiv, #cololresAnalogos {
+.filas {
     display: flex;
     flex-direction: row;
+    
 
 }
-
-#partes {
+.columnas {
     display: flex;
-    flex-direction: row;
-
+    flex-direction: column;
 }
