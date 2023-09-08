@@ -11,6 +11,7 @@ colorInput.addEventListener('input', actualizar);
 function actualizar() {
     monocromatico.innerHTML = "";
     compleDiv.innerHTML = "";
+    analogos.innerHTML = "";
     const color = colorInput.value;
     hex.innerHTML = color;
     
@@ -18,14 +19,39 @@ function actualizar() {
 
 
     const rgbUsed = sacarRGB(color);
+
+    //================== Complementario
     const rgbComple = crearComplement(rgbUsed);
 
+
+    //================== Monocromaico
     for (let i = 1; i < 5; i++) {
       const rgbMono = crearMonocromatico(rgbUsed, (i * 25)/100);
       crearMuestra(monocromatico,rgbMono);
     }
     
+    //================== Complementario Dividido
     ComplementarioDividido(rgbComple);
+
+
+    //================== Analogo
+    console.log("HOLA ",rgbUsed);
+
+    var confirmacion = 0;
+    for (let i = 2; i >=1; i-- ){
+      const rgbGen = generarAnalogo(rgbUsed,i,confirmacion);
+      crearMuestra(analogos,rgbGen);
+      confirmacion = 0;
+    }
+    rgbN = `rgb(${rgbUsed.r}, ${rgbUsed.g}, ${rgbUsed.b})`
+    crearMuestra(analogos,rgbN);
+
+    confirmacion = 1;
+    for (let i = 1; i <=2; i++ ){
+      const rgbGen = generarAnalogo(rgbUsed,i,confirmacion);
+      crearMuestra(analogos,rgbGen);
+      confirmacion = 1;
+    }
 
     
 
@@ -84,6 +110,82 @@ function crearComplement(rgb) {
     colorBox.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     
     return {r,b,g}
+}
+
+
+
+
+
+function generarAnalogo(rgb, posicion,confirmacion) {
+    console.log("HOLA ",rgb);
+
+    const rgbD = Object.values(rgb);
+    const rgbDup = Object.values(rgb);
+    console.log(rgbDup);
+    var min1 = Math.min(...rgbDup);
+    var min2 = 0;
+    console.log(min1 , rgbDup.indexOf(min1));
+
+    rgbDup.splice(rgbDup.indexOf(min1),1);
+    console.log(rgbDup);
+
+    var diferencia = Math.abs(rgbDup[0]-rgbDup[1]);
+    console.log(diferencia);
+
+    var aumento = 0;
+    valores = [true, true, true];
+    if (diferencia < 50 ) {   //Solo 1 numero no cambia el "min1" (los otros colores pierden)
+      console.log("Secundario");
+      aumento = -75*posicion;
+      valores[rgbD.indexOf(min1)] = false;
+
+    } else {                  //Solo 1 numero no cambia "Numero mas grande" (Los otros colores ganan valor)
+      console.log("Primario");
+      aumento = 75*posicion;
+      min2 = Math.min(...rgbDup);
+      rgbDup.splice(rgbDup.indexOf(min2),1);
+
+      valores[rgbD.indexOf(rgbDup[0])] = false;
+
+    }
+
+    var rNew = rgb.r;
+    var gNew = rgb.g;
+    var bNew = rgb.b;
+
+    if (valores[0]) {         //Se modifica la R
+      console.log("Modif RA");
+      rNew = Math.min(255, rgb.r+(aumento*confirmacion));
+      if (confirmacion == 1) {
+        confirmacion = 0;
+      } else {
+        confirmacion = 1;
+      }
+    }
+    if (valores[1]) {         //Se modifica G
+      console.log("Modif GA");
+      gNew = Math.min(255, rgb.g+(aumento*confirmacion));
+      if (confirmacion == 1) {
+        confirmacion = 0;
+      } else {
+        confirmacion = 1;
+      }
+    }
+    if (valores[2]) {         //Se modifica B
+      console.log("Modif BA");
+      bNew = Math.min(255, rgb.b+(aumento*confirmacion));
+      if (confirmacion == 1) {
+        confirmacion = 0;
+      } else {
+        confirmacion = 1;
+      }
+    }
+    
+
+    console.log("FINAL ",rNew," ",gNew, " ",bNew);
+    return `rgb(${rNew}, ${gNew}, ${bNew})`;
+
+
 }
 
 function ComplementarioDividido(rgb) {
@@ -193,4 +295,3 @@ function ComplementarioDividido(rgb) {
 
 
 }
-
